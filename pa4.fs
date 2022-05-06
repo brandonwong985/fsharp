@@ -8,7 +8,7 @@
 
 open System
 
-// Part 1
+/// Part 1
 /// Takes in a list of (float, float, float) tuples
 /// Returns the maximum cube volume from the list as a float
 let rec maxCubeVolume list: float = 
@@ -21,7 +21,7 @@ let rec maxCubeVolume list: float =
             if  volume > maxCubeVolume tl then volume               
             else maxCubeVolume tl            
 
-// Part 2
+/// Part 2
 /// Takes in a key and a list of (string, int) tuples
 /// Returns a list of ints whose string matched the key
 let rec findMatches key list: int list = 
@@ -33,8 +33,8 @@ let rec findMatches key list: int list =
             if key = string then List.sort(num :: findMatches key tl)                
             else List.sort(findMatches key tl)                
 
-// Part 3
-// Tree definition for problem 3
+/// Part 3
+/// Tree definition for problem 3
 type BST =
     | Empty
     | TreeNode of int * BST * BST
